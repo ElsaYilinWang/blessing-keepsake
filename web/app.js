@@ -55,8 +55,19 @@ function render(){
     const art=images.length?images:(example?Array(count).fill(example):[]);
     let soft=false;
     art.slice(0,count).forEach((im,i)=>{soft=drawArt(im,m+(i%cols)*(cw+gap),h*.16+Math.floor(i/cols)*(ch+gap),cw,ch)||soft;});
-    textBox($('blessing').value,m,h*.705,inner,h*.115,38,24);
-    textBox($('context').value,m,h*.83,inner,h*.085,26,19);
+    // Fit both lines together so their font size always matches.
+    let bodySize=32;
+    for(;bodySize>=24;bodySize--){
+      context.font=bodySize+'px Georgia, serif';
+      const fits=[['blessing',h*.115],['context',h*.085]].every(([id,height])=>{
+        const lines=wrap(context,$(id).value,inner);
+        return lines&&lines.length*Math.ceil(bodySize*1.38)<=height;
+      });
+      if(fits)break;
+    }
+    if(bodySize<24)throw new Error('Please shorten the blessing or context so both fit clearly.');
+    textBox($('blessing').value,m,h*.705,inner,h*.115,bodySize,bodySize);
+    textBox($('context').value,m,h*.83,inner,h*.085,bodySize,bodySize);
     textBox($('footer').value,m,h*.93,inner,h*.035,20,16);
     if(images.length&&images.length!==count)throw new Error('Choose exactly '+count+' image'+(count>1?'s':'')+' for this layout.');
     renderOK=art.length===count;

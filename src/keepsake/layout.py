@@ -135,10 +135,24 @@ def render(config):
         x = margin + (index % cols)*(cell_w+gap) + (cell_w-art.width)//2
         y = top + (index // cols)*(cell_h+gap) + (cell_h-art.height)//2
         canvas.paste(art, (x, y))
+    # Keep blessing and context at the same fitted font size.
+    body_size = 32
+    for body_size in range(32, 23, -1):
+        face = font(config, body_size)
+        fits = True
+        for field, height in (("blessing", int(h*.115)), ("context", int(h*.085))):
+            lines = wrap(draw, config[field], face, inner)
+            if lines is None or len(lines) * math.ceil(body_size * 1.38) > height:
+                fits = False
+                break
+        if fits:
+            break
+    if not fits:
+        raise ValueError("Shorten the blessing or context so both fit clearly")
     text_box(draw, config["blessing"], (margin, int(h*.705), inner, int(h*.115)),
-             config, 38, 24)
+             config, body_size, body_size)
     text_box(draw, config["context"], (margin, int(h*.83), inner, int(h*.085)),
-             config, 26, 19)
+             config, body_size, body_size)
     text_box(draw, config.get("footer", ""), (margin, int(h*.93), inner, int(h*.035)),
              config, 20, 16)
     return canvas
