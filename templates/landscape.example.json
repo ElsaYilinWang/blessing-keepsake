@@ -1,0 +1,39 @@
+{
+  "orientation": "landscape",
+  "fit": "contain",
+  "names": "Alex & Sam",
+  "images": [
+    {
+      "path": "../assets/samples/memory-1.png"
+    }
+  ],
+  "blessing": "May we grow in our own ways, and keep choosing each other.",
+  "context": "For the little walks, shared laughter, and days still to come.",
+  "footer": "A little chapter, kept forever",
+  "must_preserve": {
+    "identity": [
+      "face shape",
+      "hairstyle",
+      "glasses",
+      "individual expressions"
+    ],
+    "moment": [
+      "original pose",
+      "linked arms",
+      "clothing",
+      "location cues"
+    ],
+    "story": [
+      "medals",
+      "meaningful bags or pets"
+    ]
+  },
+  "review": {
+    "consent_confirmed": false,
+    "identity_approved": false,
+    "moment_approved": false,
+    "story_approved": false,
+    "text_approved": false,
+    "print_crop_checked": false
+  }
+}

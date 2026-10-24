@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "blessing-keepsake"
+version = "0.1.0"
+description = "Local, deterministic 10x15 cm keepsake card layout"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "Proprietary"}
+dependencies = ["Pillow==12.3.0"]
+
+[project.scripts]
+keepsake = "keepsake.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]

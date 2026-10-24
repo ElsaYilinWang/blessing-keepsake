@@ -1,0 +1,35 @@
+{
+  "orientation": "portrait",
+  "fit": "contain",
+  "names": "Four little chapters",
+  "images": [
+    {
+      "path": "../assets/samples/memory-1.png"
+    },
+    {
+      "path": "../assets/samples/memory-2.png"
+    },
+    {
+      "path": "../assets/samples/memory-3.png"
+    },
+    {
+      "path": "../assets/samples/memory-4.png"
+    }
+  ],
+  "blessing": "May there always be more paths to share.",
+  "context": "For ordinary days that became our favourite memories.",
+  "footer": "PLACE / DATE",
+  "must_preserve": {
+    "identity": [],
+    "moment": [],
+    "story": []
+  },
+  "review": {
+    "consent_confirmed": false,
+    "identity_approved": false,
+    "moment_approved": false,
+    "story_approved": false,
+    "text_approved": false,
+    "print_crop_checked": false
+  }
+}

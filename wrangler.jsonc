@@ -1,0 +1,6 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "blessing-keepsake",
+  "compatibility_date": "2026-10-24",
+  "assets": { "directory": "./web" }
+}

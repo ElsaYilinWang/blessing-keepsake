@@ -1,0 +1,1 @@
+{"name":"blessing-keepsake","private":true,"type":"module","license":"UNLICENSED","scripts":{"test":"node --test tests/png-dpi.test.mjs","deploy":"npx wrangler deploy"}}
