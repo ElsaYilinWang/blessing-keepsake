@@ -1,5 +1,22 @@
 # Publishing your business project
 
+## Current deployment
+- Source: https://github.com/ElsaYilinWang/blessing-keepsake (public, as requested).
+- Live site: https://blessing-keepsake.elsa-yilin-w39.workers.dev/
+- Deployed on 24 October 2026 using Cloudflare dashboard static-file upload.
+- GitHub commits do not yet trigger automatic deployments. To update today: Cloudflare > Workers & Pages > blessing-keepsake > New deployment > upload the contents of web/.
+- Connect Cloudflare Builds to this repository later if you want automatic deployment on push.
+
+
+## Using the live site, step by step
+1. Open the site and expand the ChatGPT illustration brief.
+2. Copy it into ChatGPT with a photo you have permission to use; generate and review the illustration.
+3. Save the approved illustration to your device.
+4. Select one or four illustrations on the website and choose portrait or landscape.
+5. Enter names, a blessing, a distinct context sentence and optional place/date.
+6. Check the details and permission box, then download print, digital preview, or wallpaper.
+7. Choose the 10 x 15 cm option at the printer and inspect its crop preview.
+
 ## What is live in this version
 The website is a browser-based card maker. Illustration generation is manual in ChatGPT.
 Visitors select finished illustrations (or photos), type wording, then download:

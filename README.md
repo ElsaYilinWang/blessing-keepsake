@@ -1,5 +1,7 @@
 # Blessing Portrait / Keepsake Card
 
+**Live website:** https://blessing-keepsake.elsa-yilin-w39.workers.dev/
+
 **Business edition:** public source repository (owner-selected visibility) plus a browser-based card studio in web/.
 Illustrations are created manually in ChatGPT; the website makes the layout and downloads.
 Read [the step-by-step publishing guide](docs/PUBLISHING.md) for GitHub, Cloudflare and licence choices.
@@ -90,7 +92,7 @@ tests/                Dimensions, metadata, validation, crop and repeatability c
 docs/                 Workflow, upstream prompt, privacy
 integrations/comfyui/ Future optional adapter boundary
 .github/workflows/    Automated tests on Windows and Linux
-examples/             Generated demo outputs for visual reference
+examples/             Generated demo outputs (download archive; reproduce with CLI)
 ```
 
 ## Tests
